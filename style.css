@@ -1,5 +1,5 @@
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Barlow light';
     background-color: hsl(210, 46%, 95%);
     color: hsl(217, 19%, 38%);
     margin: 0;
@@ -9,9 +9,8 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
 #container {
-    max-width: 1000px;
+    width: 200px;
     margin-top: 10px;
 }
 .testimonial-header {
@@ -29,15 +28,16 @@ body {
     height: 50px;
     border-radius: 50%;
 }
-.bold {
-    font-weight: bold;
+.bold, .name {
+    font-family: 'Barlow bold';
+    font-size: 15px;
 }
 .testimonial{
     color: white;
-    padding: 20px;
+    padding: 35px;
     border-radius: 10px;
-    margin-bottom: 20px;
-    width:200px;
+    margin: 20px;
+    width:100%;
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
     height:max-content;
 }
@@ -57,34 +57,86 @@ body {
     background-color: hsl(0, 0%, 100%);
     color: hsl(217, 19%, 38%);
 }
-    /* Desktop layout */
-    @media (min-width: 900px) {
+    /* Desktop layout:change min-width to 900px later */
+@media (min-width: 900px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     #container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
+        flex-direction: row;
+        height:max-content;
+        gap: 20px;
+        width: 1000px;
+        align-items: center;
+    }
+    .gridContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width:100%;
+        height: 750px;
+    }
+    .div1,.div2{
+        display: flex;
+        flex-direction: row;
+        height:50%;
+        margin:20px;
+    }
+    .div1{
+        width:100%;
+    }
+    .kira{
+        width: 200px;
+        height:max-content;
+    }
+    
+    .daniel{
+        width:55%;
+        height: max-content;
+        margin:10px;
         gap: 20px;
     }
-
-    .daniel {
-        grid-column: 1 / span 2;
-    }
-
+    
     .jonathan {
-        grid-column: 3;
+        width:25%;
+        height:max-content;
+        margin:10px;
+    }  
+    
+    .jeanette{
+        width:25%;
+        height:max-content;
+        margin:10px;
     }
-
-    .jeanette {
-        grid-column: 1;
-    }
-
     .patrick {
-        grid-column: 2 / span 2;
+        width:55%;
+        height: max-content;
+        margin:10px;
+    }   
     }
 
-    .kira {
-        grid-column: 4;
-        grid-row: 1 / span 2;
-    }
-    }
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@font-face {
+font-family: "Barlow bold";
+src: url('design/fonts/Barlow_Semi_Condensed,Montserrat,Poppins/Barlow_Semi_Condensed/BarlowSemiCondensed-SemiBold.ttf') format("truetype");
+font-weight: 600;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: "Barlow light";
+src: url('design/fonts/Barlow_Semi_Condensed,Montserrat,Poppins/Barlow_Semi_Condensed/BarlowSemiCondensed-Light.ttf') format("truetype");
+font-weight: 500;
+font-style: normal;
+}
