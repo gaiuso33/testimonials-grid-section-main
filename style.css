@@ -19,8 +19,8 @@ body {
     gap: 15px;
 }
 .testimonial-content p {
-  margin: 10px 0;
-  line-height: 1.6;
+    margin: 10px 0;
+    line-height: 1.6;
 }
 
 .testimonial-image {
@@ -61,16 +61,14 @@ body {
     background-color: hsl(0, 0%, 100%);
     color: hsl(217, 19%, 38%);
 }
-    /* Desktop layout:change min-width to 900px later */
-@media (min-width: 600px) {
+    /* Desktop layout */
+@media (min-width: 900px) {
     body{
         display: flex;
         flex-direction: column;
         align-content: center;
         justify-content: center;
     }
-
-    /* turn the main container into the exact 4-col grid from the design */
     #container{
         height:max-content;
         width: fit-content;
@@ -78,26 +76,23 @@ body {
         flex-direction: row;
         align-items: start;
     }
-
     .gridContainer{
         display: grid;
         width: 75%;
         height: fit-content;
-        gap:24px;    
-        justify-items: center; /* horizontal */
+        row-gap: 20px;
+        column-gap: 20px;    
+        justify-items: center; 
         align-items: center;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr 1fr;
+        grid-template: repeat(4, 1fr)/ 1fr 1fr;
     }
-    /* grid placement to match the screenshot */
     .daniel{
-        grid-column: 1 / span 2; /* takes 2 columns */
+        grid-column: 1 / span 2;
         grid-row: 1;
         gap:24px;
         width:420px;
         margin: 0px;
     }
-
     .jonathan{
         grid-column: 3;
         grid-row: 1;
@@ -105,7 +100,6 @@ body {
         height: 300px;
         margin: 0px;
     }
-
     .jeanette{
         grid-column: 1;
         grid-row: 2;
@@ -113,23 +107,20 @@ body {
         height: 300px;
         margin: 0px;
     }
-
     .patrick{
-        grid-column: 2 / span 2; /* takes columns 2-3 */
+        grid-column: 2 / span 2; 
         grid-row: 2;
         width:400px;
         margin: 0px;
         height: 300px;
     }
-
     .kira{
         grid-column: 4 ;
         grid-row: 1/ span 2;
         width: 150px;
         height: max-content;
-        /* tall card on the right */
     }
-    }   
+}   
 
 .attribution { 
     font-size: 11px; 
