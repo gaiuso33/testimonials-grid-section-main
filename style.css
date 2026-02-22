@@ -95,6 +95,7 @@ body {
         grid-row: 1;
         gap:24px;
         width:420px;
+        margin: 0px;
     }
 
     .jonathan{
@@ -102,6 +103,7 @@ body {
         grid-row: 1;
         width:190px;
         height: 300px;
+        margin: 0px;
     }
 
     .jeanette{
@@ -109,12 +111,14 @@ body {
         grid-row: 2;
         width:190px;
         height: 300px;
+        margin: 0px;
     }
 
     .patrick{
         grid-column: 2 / span 2; /* takes columns 2-3 */
         grid-row: 2;
         width:400px;
+        margin: 0px;
         height: 300px;
     }
 
